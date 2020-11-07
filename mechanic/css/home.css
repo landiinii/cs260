@@ -1,0 +1,13 @@
+.container {
+  margin-top: 80px;
+  position: relative;
+  text-align: center;
+}
+
+.container p {
+  color: black;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
