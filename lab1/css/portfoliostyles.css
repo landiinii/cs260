@@ -1,0 +1,33 @@
+.grid {
+  column-count: 1;
+  column-gap: 1em;
+}
+
+.grid-item {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.grid-item img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px){
+  .grid {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 700px){
+  .grid {
+    column-count: 3;
+  }
+}
+@media only screen and (min-width: 960px){
+  .grid {
+    column-count: 4;
+  }
+}

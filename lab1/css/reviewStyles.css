@@ -1,0 +1,16 @@
+body{
+  text-align: center;
+  font-size: 100%;
+}
+h1{
+  text-decoration: underline;
+}
+h4{
+  color: #535353;
+  font-style: italic;
+}
+p{
+  padding-top: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
