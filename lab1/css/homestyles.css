@@ -1,19 +1,50 @@
 .container {
+  margin-top: 110px;
   position: relative;
   text-align: center;
   color: white;
 }
 
-.top-left {
-  color: black;
-  position: absolute;
-  top: 8px;
-  left: 100px;
-}
 
 .centered {
+  width: 80%;
   position: absolute;
+  font-size: 70%;
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media only screen and (min-width: 400px){
+  .container {
+    margin-top: 70px;
+  }
+  .centered {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 570px){
+  .container {
+    margin-top: 70px;
+  }
+
+}
+
+@media only screen and (min-width: 700px){
+  .container {
+    margin-top: 30px;
+  }
+  .centered {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 960px){
+  .container {
+    margin-top: 0px;
+  }
+  .centered {
+    font-size: 120%;
+  }
 }
