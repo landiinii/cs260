@@ -24,7 +24,6 @@
 }
 
 .grid-item {
-  border: 1px solid black;
   display: inline-block;
   margin: 0 0 1em;
   width: 90%;
