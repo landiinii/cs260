@@ -59,10 +59,7 @@ p{
 }
 
 @media only screen and (min-width: 243px) {
-  body{
-    font-size: 80%
-  }
-  p{
+    p{
     font-size: 90%
   }
   .container {
