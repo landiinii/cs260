@@ -1,0 +1,110 @@
+h2{
+  text-shadow: 2px 2px #cacaca;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 70%;
+}
+
+.backRibbon {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #777777;
+  display: flex;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  min-width: 0;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.title, .price{
+  text-align:center;
+  width:100%;
+}
+
+.price h6{
+  text-align: left;
+}
+
+.critical{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items: center;
+  min-width: 0;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.container img{
+  width: 100%;
+}
+.aboutInfo {
+  margin-top: 3%;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 243px) {
+  body{
+    font-size: 80%
+  }
+  p{
+    font-size: 90%
+  }
+  .container {
+    margin-top: 60px;
+  }
+  .aboutInfo {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 530px) {
+  .container {
+    margin-top: 55px;
+  }
+  .backRibbon {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .container {
+    margin-top: 70px;
+  }
+  .critical {
+    flex-direction: row;
+    margin-bottom: 25px;
+  }
+  h2{
+    font-size: 300%;
+  }
+  p{
+    font-size: 120%
+  }
+  .container img{
+    width: 50%;
+    padding: 15px;
+  }
+  .aboutInfo {
+    font-size: 100%;
+    width: 50%;
+    padding-top: 25px;
+  }
+}
