@@ -28,7 +28,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
               results += "and ";
             }
         }
-        results += " with a temperature of " + Math.round(json.main.temp) + " &deg;F</h4>"
+        results += " with a temperature of " + Math.round(json.main.temp) + "&deg;F</h4>"
         document.getElementById("weatherResultsInfo").innerHTML = results;
 
         const url2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + ", US&units=imperial" + "&APPID=476402509737649b508ae10ab8f35cbf";
