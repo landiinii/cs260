@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-custom navbar-expand-sm justify-content-center fixed-top">
+    <nav class="navbar navbar-custom navbar-dark navbar-expand-sm justify-content-center fixed-top">
     <a class="navbar-brand" href="http://landiinii.com">
       <img src="../pics/Landiinii-f-g.png" alt="Landiinii Logo" style="width:140px;">
     </a>
@@ -27,13 +27,29 @@
       </ul>
     </div>
   </nav>
+  <div class="backRibbon">
+    <h1>Weather</h1>
 
-<h1>Weather Pages</h1>
+    <form class="cityForm">
+      <label>Enter a U.S. city: </label>
+      <input id="weatherInput" type="text"></input><br/>
+      <input id="weatherSubmit" type="submit" value="Submit"></input>
+    </form>
 
+    <div id="weatherResultsTitle"></div>
+    <div id="weatherResultsInfo"></div>
+    <div id="forecastResults"></div>
+
+  </div>
 
     <div class="footer">
-      <div class="repolink"><a href="https://emergencycompliment.com/">Lol, you're looking good Gorgeous!</a></div>
+      <div class="repolink"><a href="https://.com/">Check out the Repo for this Website here!</a></div>
     </div>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script text="type/javascript" src="js/script.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </body>
 </html>
