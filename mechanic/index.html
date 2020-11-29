@@ -43,39 +43,46 @@
     </div>
   </nav>
 
-  <div class="container">
-    <h3>Welcome to Landiinii's Mechanic Website! What do you need done on your Car?</h3>
-  </div>
-  <div class="grid">
-    <div class="grid-item">
-      <a href="../pages/airfilter.html">
-        <img src="/images/airfilter.jpg">
-        <h4>Air Filter</h4>
-      </a>
+
+  <div class="backRibbon">
+    <div class="container">
+      <h3>Welcome to Landiinii's Mechanic Website! Enter your Car information below to learn about the Maintenance needed!</h3>
     </div>
-    <div class="grid-item">
-      <a href="../pages/brakepads.html">
-        <img src="/images/brakepad.jpg">
-        <h4>Brake Pads</h4>
-      </a>
+
+    <div class="info">
+      <form class="vinForm">
+          <label for="vinInput">VIN Number: </label>
+          <input id="vinInput" type="text"></input><br/>
+          <label for="carMileage">Mileage: </label>
+          <input type="text" id="carMileageVin"></input><br/>
+          <input id="vinSubmit" type="submit" value="Go"></input>
+      </form>
+      <h5>OR</h5>
+      <form class="carForm">
+          <label for="carYear">Year: </label>
+          <input type="text" id="carYear"></input><br/>
+          <label for="carMake">Make: </label>
+          <input type="text" id="carMake"></input><br/>
+          <label for="carModel">Model: </label>
+          <input type="text" id="carModel"></input><br/>
+          <label for="carMileage">Mileage: </label>
+          <input type="text" id="carMileage"></input><br/>
+          <input id="carSubmit" type="submit" value="Go"></input>
+      </form>
     </div>
-    <div class="grid-item">
-      <a href="../pages/oilchange.html">
-        <img src="/images/oilchange.jpg">
-        <h4>Oil Change</h4>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="../pages/sparkplugs.html">
-        <img src="/images/sparkplug.jpg">
-        <h4>Spark Plugs</h4>
-      </a>
-    </div>
+
+    <div id="maintenanceInfo"></div>
   </div>
 
   <div class="footer">
     <div class="terms"><a href="https://github.com/landiinii/cs260/tree/master/mechanic">GitHub Repository</a></div>
   </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="js/home.js"></script>
 </body>
 
 </html>
