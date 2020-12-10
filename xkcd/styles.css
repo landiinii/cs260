@@ -1,0 +1,63 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+#app{
+  margin-bottom: 25px;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text, .navbar-toggler {
+    color: #cacaca;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+}
+
+.navbar-custom {
+    background-color: #010199;
+}
+
+h1{
+  margin-top: 100px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 243px){
+  h1{
+    margin-top: 60px;
+  }
+}
+
+.footer{
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #010199;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.terms a{
+  display: block;
+  color: #cacaca;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 4px;
+}
