@@ -16,15 +16,29 @@
         <router-link to="/cart">
           <div class="menu-item">
             <img src="/images/love.png">
-            <p>0 items</p>
+            <p>{{items}}</p>
           </div>
         </router-link>
       </div>
     </div>
     <router-view />
+    <div class="footer">
+      <div class="terms"><a href="https://github.com/BYU-CS-260-Winter-2020/lab-3b-grocery-store-landiinii">GitHub Repository</a></div>
+    </div>
   </div>
 </template>
 
+<script>
+
+export default {
+  computed: {
+    items() {
+      let num = this.$root.$data.cart.length;
+      return num + " Items";
+    }
+  }
+}
+</script>
 
 <style>
 * {
@@ -79,5 +93,25 @@ body {
 
 .browse {
   margin-right: 50px;
+}
+
+.footer{
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #B84901;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.terms a{
+  display: block;
+  color: #cacaca;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 4px;
 }
 </style>

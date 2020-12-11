@@ -1,17 +1,14 @@
 <template>
   <div class="wrapper">
-    <div class="products">
+    <div v-if="empty">
+      <H1>Your Cart is Currently Empty</H1>
+    </div>
+    <div v-else class="products">
       <div class="product" v-for="product in products" :key="product.id">
         <div class="info">
           <h1>{{product.name}}</h1>
-          <p>{{product.country}}</p>
-        </div>
-        <div class="image">
-          <img :src="'/images/products/'+product.image">
-        </div>
-        <div class="price">
           <h2>{{product.price}}</h2>
-          <button class="auto" v-on:click="addCart(product)">Add to Cart</button>
+          <button v-on:click="remove(product)">Remove From Cart</button>
         </div>
       </div>
     </div>
@@ -19,15 +16,24 @@
 </template>
 
 <script>
+
 export default {
-  name: 'ProductList',
-  props: {
-    products: Array
+  name: "Cart",
+  computed: {
+    empty(){
+      let proc = this.$root.$data.cart;
+      return proc.length === 0;
+    },
+    products() {
+      return this.$root.$data.cart;
+    }
   },
   methods: {
-    addCart(product){
-      console.log(product);
-      this.$root.$data.cart.push(product);
+    remove(product){
+      const index = this.$root.$data.cart.indexOf(product);
+      if (index > -1) {
+        this.$root.$data.cart.splice(index, 1);
+      }
     },
   }
 }
@@ -44,7 +50,7 @@ export default {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .product {
@@ -70,7 +76,10 @@ export default {
   background: #F2921D;
   color: #000;
   padding: 10px 30px;
-  height: 80px;
+  height: 100%;
+  display: block;
+  align-items: center;
+  text-align: center;
 }
 
 .info h1 {
@@ -81,24 +90,11 @@ export default {
   font-size: 14px;
 }
 
-.info p {
-  margin: 0px;
-  font-size: 10px;
-}
-
-
-.price {
-  display: flex;
-}
-
-button {
+.info button {
   height: 50px;
   background: #000;
   color: white;
   border: none;
 }
 
-.auto {
-  margin-left: auto;
-}
 </style>

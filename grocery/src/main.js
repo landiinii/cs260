@@ -5,7 +5,8 @@ import mock from './mock-data.js'
 
 let data = {
   products: mock,
-  cart: []
+  cart: [],
+  items: 0
 }
 
 new Vue({
