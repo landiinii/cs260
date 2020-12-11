@@ -31,6 +31,26 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
         results += " with a temperature of " + Math.round(json.main.temp) + "&deg;F</h4>"
         document.getElementById("weatherResultsInfo").innerHTML = results;
 
+        let sunrise = json.sys.sunrise;
+        var date = new Date(sunrise * 1000);
+        var hours = date.getHours();
+        var minutes = "0" + date.getMinutes();
+        var sunriseTime = hours + ':' + minutes.substr(-2)
+        let sunset = json.sys.sunset;
+        var date = new Date(sunset * 1000);
+        var hours = date.getHours();
+        var minutes = "0" + date.getMinutes();
+        var sunsetTime = hours + ':' + minutes.substr(-2)
+
+        let sun = "<h4>The Sun will Rise at ";
+        sun += sunriseTime;
+        sun += "</h4>"
+        sun += "<h4>The Sun will set at ";
+        sun += sunsetTime;
+        sun += "</h4>";
+        console.log(sun);
+        document.getElementById("sunriseResultsInfo").innerHTML = sun;
+
         const url2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + ", US&units=imperial" + "&APPID=476402509737649b508ae10ab8f35cbf";
         fetch(url2)
           .then(function(response) {
