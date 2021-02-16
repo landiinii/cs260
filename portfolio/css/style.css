@@ -100,3 +100,22 @@ body {
   color: #010199;
   text-decoration: underline;
 }
+
+
+@media only screen and (max-width: 960px){
+  .names h1{
+    font-size: 4.0em;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .names h1{
+    font-size: 3.0em;
+  }
+}
+
+@media only screen and (max-width: 335px){
+  .names h1{
+    font-size: 2.5em;
+  }
+}
