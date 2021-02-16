@@ -21,6 +21,10 @@ body {
   font-size: 5.0em;
 }
 
+.contact li{
+  font-size: 80%;
+}
+
 .wrapper{
   display: flex;
   flex-direction: row;
@@ -46,6 +50,7 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   max-width: 600px;
+  min-height: 204px;
   padding: 10px;
   margin: 10px;
 }
@@ -54,6 +59,16 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   max-width: 300px;
+  min-height: 238px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.boxy3 {
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width:500px;
+  min-height: 146px;
   padding: 10px;
   margin: 10px;
 }
@@ -78,11 +93,19 @@ body {
     font-size: 150%;
     content: "+";
     margin-right: 3px;
+    display: inline-block;
+}
+
+.collapsible:hover:before {
+  transition: all 300ms 0s ease-in-out;
+  transform: rotate(360deg);
 }
 
 .collapsible:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+
 
 .content {
   display: none;
